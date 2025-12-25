@@ -1,0 +1,34 @@
+.content-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 2rem;
+  width: 100%;
+  max-width: 100vw;     /* prevents going out of screen */
+  box-sizing: border-box; /* ensures padding stays inside width */
+  overflow-x: hidden;     /* stops horizontal scroll */
+}
+
+/* Left side (Contact Us) takes 2 parts of the width */
+.contacts {
+  flex: 2;
+  background-color: #f9f9f900; /* transparent */
+  padding: 1.5rem;
+  border-radius: 12px;
+  min-width: 0; /* allows it to shrink properly */
+}
+
+/* Right side (CardFrontend) takes 1 part */
+.blogs {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items:center;
+
+  min-width: 0; /* prevents overflow */
+}
+
+.align-left {
+  text-align: left;
+}

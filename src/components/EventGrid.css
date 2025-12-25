@@ -1,0 +1,31 @@
+.event-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 18px;
+  margin-top: 20px;
+}
+:root {
+  --text: #fff; /* white text */
+  --bg: #121212; /* dark background */
+}
+
+.event-card {
+  background: var(--bg);
+  color: var(--text);
+}
+
+.event-card {
+  min-height: 220px;
+  color: var(--text);
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.locked-wrapper {
+  text-align: center;
+}
+
+.locked-wrapper h3 { margin: 8px 0; }
+.locked-wrapper .rules { font-size: 13px; opacity: 0.9; margin-bottom: 12px; }

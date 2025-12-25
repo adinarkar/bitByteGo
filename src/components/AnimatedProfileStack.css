@@ -1,0 +1,58 @@
+.profilecardswap-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  perspective: 1200px;
+}
+
+/* Re-center CardSwap (remove bottom-right offset) */
+.profilecardswap-wrapper .card-swap-container {
+  position: relative;
+  bottom: unset;
+  right: unset;
+  transform: none;
+  perspective: inherit;
+}
+
+/* Optional: add subtle glow to topmost card */
+.profilecardswap-wrapper .card:first-child .pc-card {
+  filter: drop-shadow(0 0 25px rgba(130, 180, 255, 0.35));
+  transform: scale(1.02);
+}
+
+/* Make the other cards slightly dimmer */
+.profilecardswap-wrapper .card:not(:first-child) .pc-card {
+  opacity: 0.85;
+  filter: brightness(0.8);
+}
+
+/* Remove unexpected scaling artifacts from the ProfileCard itself */
+.profile-swap-card {
+  transform: none !important;
+  will-change: transform;
+}
+
+/* Responsive scaling */
+@media (max-width: 768px) {
+  .profilecardswap-wrapper {
+    height: 90vh;
+  }
+
+  .profilecardswap-wrapper .card-swap-container {
+    transform: scale(0.85);
+  }
+}
+
+@media (max-width: 480px) {
+  .profilecardswap-wrapper {
+    height: 85vh;
+  }
+
+  .profilecardswap-wrapper .card-swap-container {
+    transform: scale(0.7);
+  }
+}

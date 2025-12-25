@@ -1,0 +1,81 @@
+/* shared styles for minigames */
+.tilebreaker {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+  gap: 8px;
+  justify-items: center;
+}
+
+.tile {
+  width: 48px;
+  height: 48px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius: 8px;
+  font-size: 20px;
+  cursor: pointer;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.04);
+  transition: transform .12s;
+}
+.tile:hover { transform: translateY(-4px); }
+
+.memory-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(48px, 1fr));
+  gap: 8px;
+  justify-items: center;
+}
+.memory-card {
+  width: 56px;
+  height: 56px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius: 8px;
+  font-size: 20px;
+  background: rgba(255,255,255,0.02);
+  cursor: pointer;
+  user-select: none;
+}
+.memory-card.flipped { background: rgba(255,255,255,0.06); }
+
+.guess-number {
+  display:flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content:center;
+}
+.guess-input {
+  width: 44px;
+  height: 44px;
+  text-align: center;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.06);
+  background: rgba(255,255,255,0.02);
+  font-size: 18px;
+}
+.guess-input.correct {
+  background: rgba(76, 175, 80, 0.18);
+  border-color: rgba(76, 175, 80, 0.4);
+}
+
+.maze {
+  display: inline-block;
+  margin-top: 8px;
+}
+.maze-row { display:flex; }
+.maze-cell {
+  width: 38px;
+  height: 38px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border: 1px solid rgba(255,255,255,0.04);
+  margin: 2px;
+  border-radius: 6px;
+  background: rgba(255,255,255,0.02);
+}
+.maze-cell.player { background: rgba(75,156,219,0.18); }
+.maze-cell.goal { background: rgba(255, 193, 7, 0.16); }
