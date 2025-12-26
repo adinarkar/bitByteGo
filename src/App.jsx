@@ -40,35 +40,11 @@ const App = () => {
     />
 
     <p className="intro-text my-4">
-      BitByteGo is a creative tech platform built to inspire innovation through
-      technology, learning, and collaboration. We blend bit-sized ideas and
-      byte-level execution to deliver meaningful digital experiences — from
-      interactive games and event showcases to cutting-edge web applications.
-    </p>
-
-    <p className="mission-text my-4">
-      Our mission is to make technology accessible, engaging, and fun for
-      everyone. Whether you’re exploring new tech trends, participating in
-      events, or solving mini-games, BitByteGo is your space to learn, create,
-      and grow.
-    </p>
-
-    <div className="vision-values ">
-      <h3 className="my-4">Vision</h3>
-      <p>
-        To build a community where innovation meets creativity — one bit and one
-        byte at a time.
+     INSPIRE.CODE.SUCCEED
       </p>
 
-      <h3 className="my-4">Core Values</h3>
-      <ul>
-        <li>💡 Innovation</li>
-        <li>🤝 Collaboration</li>
-        <li>🚀 Growth</li>
-        <li>❤️ Passion for Tech</li>
-      </ul>
     </div>
-  </div>
+  
 </section>
 
 

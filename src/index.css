@@ -11,6 +11,53 @@ html, body, #root {
   font-family: "Poppins", sans-serif;
   overflow-x: hidden;
 }
+@media (max-width: 768px) {
+  .home-content {
+    padding-left: 16px;
+    padding-right: 16px;
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+
+  .home-content p,
+  .home-content h1 {
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+}
+
+/* FORCE center react-slick cards on mobile – CSS ONLY */
+@media (max-width: 768px) {
+  .slick-track {
+    display: flex !important;
+  }
+
+  .slick-slide {
+    display: flex !important;
+    justify-content: center !important;
+  }
+
+  .slick-slide > div {
+    display: flex !important;
+    justify-content: center !important;
+    width: 100%;
+  }
+}
+
+
+#upcoming-events {
+   margin-top: -200px; /* moves the section 80px up */
+  /* or */
+ 
+}
+#event-gallery {
+  position: relative;
+  min-height: 100vh;
+  padding: 110px 0;
+  z-index: 2;
+}
+
 
 /* Navbar wrapper */
 .navbar-container {
@@ -71,3 +118,59 @@ body {
 }
 .app-root { max-width: 1100px; margin: 0 auto; }
 h1 { text-align: center; margin-bottom: 20px; }
+
+#content-section {
+  width: 100vw; /* 100% of viewport width */
+  max-width: 100vw; /* prevent limiting */
+  margin: 0 auto; /* center if smaller */
+  padding: 20px; /* or whatever padding you want */
+  box-sizing: border-box; /* include padding in width */
+}
+
+.content-section > div {
+  width: 50%; /* split contacts/blogs 50-50 or adjust */
+  float: left; /* or use flexbox */
+}
+
+/* Or better: use flexbox */
+#content-section {
+  display: flex;
+  gap: 20px; /* spacing between columns */
+}
+
+.content-section > div {
+  flex: 1; /* equal width */
+  min-width: 0; /* prevent overflow */
+}
+.contacts {
+  width: 100vw;          /* 80% viewport width by default */
+  max-width: 100vw;     /* optional max width */
+  margin: 0 auto;       /* center horizontally */
+  box-sizing: border-box;
+}
+.committee-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 12px 12px;
+  justify-items: center;
+}
+
+.contacts iframe {
+  width: 100%;          /* fill the container width */
+  height: 40vh;         /* 40% viewport height */
+  border: none;
+  border-radius: 8px;
+  display: block;       /* removes unwanted inline spacing */
+}
+
+/* For smaller screens: width 40vw */
+@media (max-width: 768px) {
+  .contacts {
+    width: 40vw;        /* 40% viewport width */
+    max-width: 400px;   /* optional max width */
+  }
+  
+  .contacts iframe {
+    height: 30vh;       /* optional smaller height */
+  }
+}
