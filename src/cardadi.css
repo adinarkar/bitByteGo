@@ -32,3 +32,50 @@
 .align-left {
   text-align: left;
 }
+/* ================= HERO ================= */
+
+.hero-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-inner {
+  width: 100%;
+  max-width: 1300px;
+  margin: auto;
+  padding: 0 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-tagline {
+  margin-top: 20px;
+  font-size: 1.4rem;
+  letter-spacing: 4px;
+  opacity: 0.85;
+}
+
+.hero-3d {
+  flex: 1;
+  height: 420px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .hero-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-3d {
+    height: 300px;
+  }
+}

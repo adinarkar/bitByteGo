@@ -1,4 +1,9 @@
 /* DotGrid.css */
+.dotgrid,
+.dot-grid,
+.dotgrid-wrapper {
+  pointer-events: none;
+}
 
 .dot-grid {
   position: fixed; /* instead of relative */
